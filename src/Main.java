@@ -1,14 +1,26 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
-
+	
+	static Scanner sc = new Scanner(System.in);
+//	added arrlist and expenses arrays initialization here, need to update whenever of operations perform like deleting, adding, sorting
+	static ArrayList<Integer> arrlist = new ArrayList<Integer>();
+    static ArrayList<Integer> expenses = new ArrayList<Integer>();
     public static void main(String[] args) {
+    	
         /*System.out.println("Hello World!");*/
         System.out.println("\n**************************************\n");
         System.out.println("\tWelcome to TheDesk \n");
         System.out.println("**************************************");
-        optionsSelection();
+        expenses.add(1000);
+        expenses.add(45000);
+        expenses.add(2300);
+        expenses.add(32000);
+        expenses.add(110);
+        expenses.addAll(arrlist);
+        optionsSelection();  
 
     }
     private static void optionsSelection() {
@@ -25,16 +37,10 @@ public class Main {
             System.out.println(arr[i]);
             // display the all the Strings mentioned in the String array
         }
-        ArrayList<Integer> arrlist = new ArrayList<Integer>();
-        ArrayList<Integer> expenses = new ArrayList<Integer>();
-        expenses.add(1000);
-        expenses.add(2300);
-        expenses.add(45000);
-        expenses.add(32000);
-        expenses.add(110);
-        expenses.addAll(arrlist);
+        
+        
         System.out.println("\nEnter your choice:\t");
-        Scanner sc = new Scanner(System.in);
+        
         int  options =  sc.nextInt();
         for(int j=1;j<=slen;j++){
             if(options==j){
@@ -49,7 +55,7 @@ public class Main {
                         int value = sc.nextInt();
                         expenses.add(value);
                         System.out.println("Your value is updated\n");
-                        expenses.addAll(arrlist);
+                        arrlist.add(value);
                         System.out.println(expenses+"\n");
                         optionsSelection();
 
@@ -91,10 +97,24 @@ public class Main {
     private static void searchExpenses(ArrayList<Integer> arrayList) {
         int leng = arrayList.size();
         System.out.println("Enter the expense you need to search:\t");
-        //Complete the method
+        //used linear search 
+        int key = sc.nextInt();
+        int c=0;
+        for(int i=0;i<leng;i++) {
+        	if(key == arrayList.get(i)) {
+        		System.out.println("Your entered expense found at index "+ i+"\n");
+        	}
+        	else
+        		c+=1;
+        }
+        if(c == leng) {
+        	System.out.println("Your entered expense is not found!\n");
+        }
     }
     private static void sortExpenses(ArrayList<Integer> arrayList) {
         int arrlength =  arrayList.size();
-       //Complete the method. The expenses should be sorted in ascending order.
+       //Used collections to sort the expenses in ascending order.
+        Collections.sort(arrayList);
+        System.out.println("Expenses are sorted\n");
     }
 }
