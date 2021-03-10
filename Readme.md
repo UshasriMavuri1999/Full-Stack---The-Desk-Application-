@@ -55,8 +55,7 @@ git clone https://github.com/Simplilearn-Edu/Full-Stack---The-Desk-Application-.
 
 ## Screenshots
 
-![console](https://github.com/UshasriMavuri1999/Full-Stack---The-Desk-Application-/blob/main/screenshots/console1.png)
 
-![console](https://github.com/UshasriMavuri1999/Full-Stack---The-Desk-Application-/blob/main/screenshots/console2.png)
+![console](https://github.com/UshasriMavuri1999/Full-Stack---The-Desk-Application-/blob/master/screenshots/console2.png)
 
-![console](https://github.com/UshasriMavuri1999/Full-Stack---The-Desk-Application-/blob/main/screenshots/console3.png)
+![console](https://github.com/UshasriMavuri1999/Full-Stack---The-Desk-Application-/blob/master/screenshots/console3.png)
